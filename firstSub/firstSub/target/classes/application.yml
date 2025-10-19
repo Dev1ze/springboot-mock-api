@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    url: jdbc:h2:file:./myDB
+    username: sa
+    password: password
+    driverClassName: org.h2.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+  h2:
+    console:
+      enabled: true
+stub:
+  delay: 1000
+logging:
+  file:
+    name: ./logs/app.log
+management:
+  server:
+  endpoints:
+    web:
+      base-path: /actuator
+      exposure:
+        include: "*"
